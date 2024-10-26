@@ -10,12 +10,12 @@ services:
     ports:
         - "8443:8443" # HTTP
         - "8443:8443" # HTTPS
-        - "8123:8123" # DYNMAP
+        - "8523:8123" # DYNMAP
         - "19132:19132/udp" # BEDROCK
         - "25500-25600:25500-25600" # MC SERV PORT RANGE
     volumes:
-        - ./docker/backups:/crafty/backups
-        - ./docker/logs:/crafty/logs
-        - ./docker/servers:/crafty/servers
-        - ./docker/config:/crafty/app/config
-        - ./docker/import:/crafty/import
+        - /Container/Minecraft/backups:/crafty/backups
+        - /Container/Minecraft/logs:/crafty/logs
+        - /Container/Minecraft/servers:/crafty/servers
+        - /Container/Minecraft/app/config:/crafty/app/config
+        - /Container/Minecraft/import:/crafty/import
